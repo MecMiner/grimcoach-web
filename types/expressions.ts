@@ -67,3 +67,19 @@ export const UNIVERSAL_EMOTIONS: EmotionDefinition[] = [
     keyFeatures: ['Sorriso unilateral assimétrico', 'Tensão concentrada em um só lado'],
   },
 ];
+
+
+export type ExpressionIntensityLevel = 1 | 2 | 3 | 4;
+
+export interface IntensityDefinition {
+  level: ExpressionIntensityLevel;
+  label: string;
+  description: string;
+}
+
+export const INTENSITY_LEVELS: IntensityDefinition[] = [
+  { level: 1, label: 'Sutil', description: 'Ativação inicial leve da musculatura' },
+  { level: 2, label: 'Moderado', description: 'Expressão nítida e equilibrada' },
+  { level: 3, label: 'Forte', description: 'Contração evidente e pronunciada' },
+  { level: 4, label: 'Máximo', description: 'Pico extremo de ativação facial' },
+];

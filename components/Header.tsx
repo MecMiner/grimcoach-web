@@ -4,6 +4,7 @@ import { HeaderProps, NavItem } from "@/types";
 import { HeartHandshake, Menu, Smile, Sparkles, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
+import Link from "next/link";
 
 
 export const Header: React.FC<HeaderProps> = ({ onOpenContributeModal }) => {
@@ -63,13 +64,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContributeModal }) => {
           </button>
 
           {/* CTA Principal de Acesso */}
-          <a
-            href="#comecar"
+          <Link
+            href="/login"
             className="inline-flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-semibold text-white bg-[#F97316] hover:bg-orange-600 shadow-md shadow-[#F97316]/25 active:scale-95 transition-all"
           >
             <Sparkles className="w-4 h-4" />
             <span>Acessar App</span>
-          </a>
+          </Link>
         </div>
 
         {/* Gatilho Menu Mobile */}
@@ -114,14 +115,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContributeModal }) => {
               <span>Ajude-nos a melhorar (Enviar Vídeo)</span>
             </button>
 
-            <a
-              href="#comecar"
+            <Link
+              href="/login"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#F97316] shadow-md shadow-[#F97316]/25"
             >
               <Sparkles className="w-4 h-4" />
               <span>Acessar App</span>
-            </a>
+            </Link>
           </div>
         </div>
       )}
